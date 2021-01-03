@@ -61,3 +61,8 @@ a {
   top: -20px;
   font-size: 14px;
 }
+
+.temperature .active {
+  color: black;
+  cursor: default;
+}
