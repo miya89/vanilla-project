@@ -27,7 +27,9 @@ a {
   border: 1px solid #999b84;
   border-radius: 5px;
 }
-
+#description:first-letter {
+  text-transform: uppercase;
+}
 .description-right {
   list-style-type: none;
 }

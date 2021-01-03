@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css">
     <title>Vanilla Weather App</title>
 </head>
@@ -13,21 +14,21 @@
         <div class="wrapper">
        <div class="weather-container">
            <div class="main-overview">
-    <h1>Ubud, Bali</h1>
-    <ul> <li class="day">Sunday 06:00</li>
-    <li class="description-left">Cloudy</li>
+    <h1 id="city">Ubud, Bali</h1>
+    <ul> <li id="date">Sunday 06:00</li>
+    <li id="description">Cloudy</li>
     </ul>
     </div>
     <div class="row">
         <div class="col-6 temperature">
             <img src="https://www.gstatic.com/onebox/weather/64/cloudy.png" alt="Claudy" target="_blank" class="float-left" />
-            <strong>17</strong><span  class="units">°C | <a href="#">°F </a></span>
+            <strong id="temp">17</strong><span  class="units">°C | <a href="#">°F </a></span>
         </div>
         <div class="col-6 description-right">
             <ul class="description-list-right">
-            <li id="humidity"> Humidity: 94%</li>
-            <li id="feel-like"> Feels like: 64%</li>
-            <li id="Wind:"> Wind: 10 mph</span>
+            <li> Humidity: <span id="humidity"></span>%</li>
+            <li > Feels like: <snpan id="feel-like"></snpan>°C</li>
+            <li> Wind: <span id="wind"></span>km/h</span>
             </ul>
         </div>
     </div>
