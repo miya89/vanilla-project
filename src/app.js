@@ -8,7 +8,7 @@ function formatDate(timestamp){
     }
     let minutes=date.getMinutes();
 if (minutes < 10) {
-        hminute = `0${minutes}`
+        minutes = `0${minutes}`
     }
     return `${day} ${hours}:${minutes}`;
 }
@@ -21,9 +21,10 @@ function showCityWeather(response){
     let feelslikeElement=document.querySelector("#feel-like");
     let windElement=document.querySelector("#wind");
     let dateElement=document.querySelector("#date");
-    
-    dateElement.innerHTML=formatDate(response.data.dt * 1000);
+    let iconElement=document.querySelector("#icon");
 
+    iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`) ;
+    dateElement.innerHTML=formatDate(response.data.dt * 1000);
     windElement.innerHTML=Math.round(response.data.wind.speed);
     feelslikeElement.innerHTML= Math.round(response.data.main.feels_like);
     humidityElement.innerHTML=response.data.main.humidity
@@ -34,6 +35,7 @@ function showCityWeather(response){
 }
 
 let apiKey="d623c9d10b76ac8fadb3579bc392fa06"
-let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=metric`
+let city="Larnaca"
+let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
 console.log(apiUrl);
 axios.get(apiUrl).then(showCityWeather);
