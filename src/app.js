@@ -24,6 +24,7 @@ function showCityWeather(response){
     let iconElement=document.querySelector("#icon");
 
     iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`) ;
+    iconElement.setAttribute("alt", response.data.weather[0].description);
     dateElement.innerHTML=formatDate(response.data.dt * 1000);
     windElement.innerHTML=Math.round(response.data.wind.speed);
     feelslikeElement.innerHTML= Math.round(response.data.main.feels_like);
@@ -33,9 +34,20 @@ function showCityWeather(response){
     tempElement.innerHTML=Math.round(response.data.main.temp);
 
 }
-
+function search(city){
 let apiKey="d623c9d10b76ac8fadb3579bc392fa06"
-let city="Larnaca"
 let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
-console.log(apiUrl);
 axios.get(apiUrl).then(showCityWeather);
+}
+
+function handleSearch(event){
+    event.preventDefault();
+    let cityInputElement=document.querySelector("#city-input");
+    search(cityInputElement.value);
+}
+
+
+let form=document.querySelector("#search-input");
+form.addEventListener("submit", handleSearch)
+
+search("Lisbon");
