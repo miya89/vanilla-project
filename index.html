@@ -3,14 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="src/style.css">
     <title>Vanilla Weather App</title>
 </head>
 <body>
-
-    <h1>
-        Hey Miya, code your new good looking weather app here
-    </h1>
+    <div class="container">
+        <div class="wrapper">
+       <div class="weather-container">
+           <div class="main-overview">
+    <h1>Ubud, Bali</h1>
+    <ul> <li class="day">Sunday 06:00</li>
+    <li class="description-left">Cloudy</li>
+    </ul>
+    </div>
+    <div class="row">
+        <div class="col-6 temperature">
+            <img src="https://www.gstatic.com/onebox/weather/64/cloudy.png" alt="Claudy" target="_blank" class="float-left" />
+            <strong>17</strong><span  class="units">°C | <a href="#">°F </a></span>
+        </div>
+        <div class="col-6 description-right">
+            <ul class="description-list-right">
+            <li id="humidity"> Humidity: 94%</li>
+            <li id="feel-like"> Feels like: 64%</li>
+            <li id="Wind:"> Wind: 10 mph</span>
+            </ul>
+        </div>
+    </div>
+</div>
+<small class="code-source"> 
+    <a href="https://github.com/miya89/vanilla-project">Open-source code </a> by Miya Peynova
+</small>
+</div>
+    </div>
     <script src="src/app.js"></script>
 </body>
 </html>
