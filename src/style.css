@@ -11,6 +11,7 @@ h1 {
 h3 {
   font-size: 18px;
   margin: 0;
+  text-align: center;
 }
 ul {
   list-style: none;
@@ -75,6 +76,13 @@ a {
 }
 .weather-forecast-temp {
   margin: 0 0 10px 0;
+  text-align: center;
+}
+.weather-forecast img {
+  display: block;
+  margin: 0 auto;
+  height: 48px;
+  width: 48px;
 }
 .weather-forecast-temp strong {
   color: #999b84;
