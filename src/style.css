@@ -8,6 +8,10 @@ h1 {
   line-height: 29px;
 }
 
+h3 {
+  font-size: 18px;
+  margin: 0;
+}
 ul {
   list-style: none;
   padding-left: 0;
@@ -65,4 +69,13 @@ a {
 .temperature .active {
   color: black;
   cursor: default;
+}
+.weather-forecast {
+  margin-left: 10px;
+}
+.weather-forecast-temp {
+  margin: 0 0 10px 0;
+}
+.weather-forecast-temp strong {
+  color: #999b84;
 }
