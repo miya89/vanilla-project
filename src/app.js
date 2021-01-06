@@ -59,9 +59,10 @@ forecastElement.innerHTML +=`
                 <img src= "http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
                  />
                 <div class="weather-forecast-temp">
-                    <strong id="max-temp">${Math.round(forecast.main.temp_max)}°</strong>-<span id="min-temp">${Math.round(forecast.main.temp_min)}°</span>
+                    <strong id="max-temp">${Math.round(forecast.main.temp_max)}°</strong> <span id="min-temp">${Math.round(forecast.main.temp_min)}°</span>
                 </div>
                 </div>`;    
+            
 }
 }
 
